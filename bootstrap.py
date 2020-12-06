@@ -1,8 +1,10 @@
 # Driver
 from searching import Searching
+from sorting import Sorting
 import time
 
 sObj = Searching()
+sortObj = Sorting()
 
 d = {
     1: "CHECK SUBSTRING",
@@ -32,6 +34,10 @@ while rep != "exit":
         else:
             print("THERE IS NO MATCH!")
     elif rep == 2:
-        pass
+        nums = input("Enter nums seperated by white spaces: ").split(" ")
+        nums = list(map(int, nums))
+        sortObj.set_list(nums)
+        sortObj.bubble_sort()
+        print(sortObj.get_nums())
     else:
         print("UNKOWN COMMAND.")

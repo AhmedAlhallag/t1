@@ -19,6 +19,8 @@ class Searching:
                 return True
         return False
 
+    def method(self):
+        pass
 
 # Driver
 # s = "bannk"
